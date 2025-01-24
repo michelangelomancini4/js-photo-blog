@@ -40,8 +40,8 @@ header {
     justify-content: space-evenly;
     flex-wrap: wrap;
     /* DEBUG */
-    background-color: green;
-    border-style: dashed;
+    /* background-color: green;
+    border-style: dashed; */
 }
 
 /* regole card */
@@ -58,12 +58,6 @@ header {
 /* regole img container */
 .imgContainer {
     position: absolute;
-    /* background-image: url(../img/summer.jpg); */
-    /* background-size: cover; */
-
-    /* DEBUG */
-    /* background-color: rgb(198, 245, 10); */
-    /* border-style: dashed; */
     /* height: 250px; */
     width: 90%;
     top: 5%;
@@ -83,18 +77,42 @@ header {
     margin-left: 5%;
     margin-bottom: 1%;
 }
+
+/* regole data sotto l'immagine */
+
+.dataInfo {
+  font-family: "Sometype Mono", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: grey;
+}
+
 /* regole testo con descrizione foto */
 .photoText {
     font-size: 25px;
     font-weight: bold;
 }
+/* REGOLE responsive card */
+@media screen and (max-width:880px) {
+
+    .card {
+        
+        height: 260px;
+    }
+    
+}
+
 
 /* REGOLE TABLET */
 @media screen and (max-width:768px) {
 
     .card {
-        flex-basis: 40%;
+        flex-basis: 45%;
         height: 320px;
+    }
+    #headerTitle {
+        font-size: 60px;
+        
     }
 }
 
@@ -102,7 +120,7 @@ header {
 @media screen and (max-width:480px) {
 
     .card {
-        flex-basis: 55%;
+        flex-basis: 65%;
     }
 }
 

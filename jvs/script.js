@@ -29,7 +29,7 @@ const outputEl = document.querySelector('.cardContainer');
                   
                   </div>
                   <div class="photoInfo">
-                  <span>${date}</span>
+                  <span class="dataInfo" >${date}</span>
                   <p class= "photoText"> ${title.toUpperCase()} </p>
                   </div>
               </div>
