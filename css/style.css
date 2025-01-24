@@ -11,21 +11,65 @@ body{
   font-optical-sizing: auto;
   /* font-weight: <weight>; */
   font-style: normal;
-  /* DEBUG */
   background-image: url(../img/cork.png);
   background-size: contain;
 }
 
+/* HEADER */
 /* regole header */
 header {
-    height: 200px;
+    height: 150px;
     background-image: url(../img/wall.png);
     background-size: contain;
 }
 
 /* regole titolo principale nell' header */
 #headerTitle {
-    font-size: 110px;
+    font-size: 80px;
     text-align: center;
     padding-top: 30px;
+}
+
+/* MAIN */
+/* regole card container */
+
+.cardContainer {
+    width: 80%;
+    margin: 10%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    /* DEBUG */
+    height: 800px;
+    background-color: green;
+    border-style: dashed;
+}
+
+/* regole card */
+.card {
+    flex-basis: 27%;
+    display: flex;
+    position: relative;
+    /* DEBUG */
+    background-color: cornflowerblue;
+    /* border-style: dashed; */
+    height: 200px;
+    
+}
+/* regole img container */
+.imgContainer {
+    position: absolute;
+    /* DEBUG */
+    background-color: rgb(198, 245, 10);
+    /* border-style: dashed; */
+    height: 140px;
+    width: 90%;
+    top: 5%;
+    right: 5%;
+}
+
+/* regole testo della card sotto l'immagine */
+
+.card span {
+    align-self: flex-end;
 }
