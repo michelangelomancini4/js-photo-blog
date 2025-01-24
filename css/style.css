@@ -40,7 +40,6 @@ header {
     justify-content: space-evenly;
     flex-wrap: wrap;
     /* DEBUG */
-    height: 800px;
     background-color: green;
     border-style: dashed;
 }
@@ -51,6 +50,7 @@ header {
     display: flex;
     position: relative;
     background-color: rgb(255, 255, 255);
+    margin-bottom: 60px;
     /* border-style: dashed; */
     height: 330px;
     
