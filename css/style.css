@@ -35,7 +35,7 @@ header {
 
 .cardContainer {
     width: 80%;
-    margin: 10%;
+    margin:  5% 10%;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
@@ -52,31 +52,41 @@ header {
     background-color: rgb(255, 255, 255);
     margin-bottom: 60px;
     /* border-style: dashed; */
-    height: 330px;
+    height: 370px;
     
 }
 /* regole img container */
 .imgContainer {
     position: absolute;
-    background-image: url(../img/summer.jpg);
-    background-size: cover;
+    /* background-image: url(../img/summer.jpg); */
+    /* background-size: cover; */
 
     /* DEBUG */
     /* background-color: rgb(198, 245, 10); */
     /* border-style: dashed; */
-    height: 250px;
+    /* height: 250px; */
     width: 90%;
     top: 5%;
     right: 5%;
     bottom: 2%;
 }
 
-/* regole testo della card sotto l'immagine */
+/* regole img vacanza */
+.holidayImg {
+    max-width: 100%;
+}
 
-.card span {
+/* regole generali info card sotto l'immagine */
+
+.photoInfo {
     align-self: flex-end;
     margin-left: 5%;
-    margin-bottom: 3%;
+    margin-bottom: 1%;
+}
+/* regole testo con descrizione foto */
+.photoText {
+    font-size: 25px;
+    font-weight: bold;
 }
 
 /* REGOLE TABLET */
@@ -84,6 +94,7 @@ header {
 
     .card {
         flex-basis: 40%;
+        height: 320px;
     }
 }
 
@@ -95,12 +106,12 @@ header {
     }
 }
 
-/* REGOLE SIZING HEADER TITLE  */
+/* REGOLE RESPONSIVE HEADER TITLE  */
 @media screen and (max-width:405px) {
 
-   /* regole titolo principale nell' header */
-#headerTitle {
-    font-size: 60px;
-}
+    /* regole titolo principale nell' header */
+     #headerTitle {
+       font-size: 60px;
+     }
     
 }
