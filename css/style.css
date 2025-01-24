@@ -50,26 +50,57 @@ header {
     flex-basis: 27%;
     display: flex;
     position: relative;
-    /* DEBUG */
-    background-color: cornflowerblue;
+    background-color: rgb(255, 255, 255);
     /* border-style: dashed; */
-    height: 200px;
+    height: 330px;
     
 }
 /* regole img container */
 .imgContainer {
     position: absolute;
+    background-image: url(../img/summer.jpg);
+    background-size: cover;
+
     /* DEBUG */
-    background-color: rgb(198, 245, 10);
+    /* background-color: rgb(198, 245, 10); */
     /* border-style: dashed; */
-    height: 140px;
+    height: 250px;
     width: 90%;
     top: 5%;
     right: 5%;
+    bottom: 2%;
 }
 
 /* regole testo della card sotto l'immagine */
 
 .card span {
     align-self: flex-end;
+    margin-left: 5%;
+    margin-bottom: 3%;
+}
+
+/* REGOLE TABLET */
+@media screen and (max-width:768px) {
+
+    .card {
+        flex-basis: 40%;
+    }
+}
+
+/* REGOLE MOBILE */
+@media screen and (max-width:480px) {
+
+    .card {
+        flex-basis: 55%;
+    }
+}
+
+/* REGOLE SIZING HEADER TITLE  */
+@media screen and (max-width:405px) {
+
+   /* regole titolo principale nell' header */
+#headerTitle {
+    font-size: 60px;
+}
+    
 }
