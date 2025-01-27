@@ -47,7 +47,6 @@ body{
     left: 25%;
     border: solid yellow 2px ;
     
-
 }
 
 /* regole button chiusura */
@@ -56,7 +55,7 @@ body{
     padding: 10px;
     position: absolute;
     top: 100px;
-    right: 15%;
+    right: 3%;
     background-color: #abc616;
     padding: 1%;
     font-size: 20px;
@@ -156,7 +155,7 @@ header {
      /* regole card */
     .card {
         
-        height: 260px;
+        height: 250px;
     }
     
 }
@@ -171,11 +170,21 @@ header {
         
     }
 
+    /* regole immagine dell'overlay */
+    .overlayImg {
+        
+         top: 100px;
+         left: 17%;
+     
+     }
+
     /* regole card */
     .card {
         flex-basis: 45%;
         height: 330px;
     }
+
+    
     /* regole red-pin */
 .redPin {
     width: 30px;
