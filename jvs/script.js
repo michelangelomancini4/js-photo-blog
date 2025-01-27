@@ -25,6 +25,7 @@ const outputEl = document.querySelector('.cardContainer');
             outputEl.innerHTML += `
               <div class="card">
                   <div class="imgContainer">
+                  <img class="redPin" src="./img/pin.svg" alt="red-pin">
                   <img class="holidayImg" src="${url}" alt="">
                   
                   </div>

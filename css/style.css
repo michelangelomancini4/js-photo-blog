@@ -9,11 +9,29 @@
 body{
   font-family: "Edu Tas Beginner", serif;
   font-optical-sizing: auto;
-  /* font-weight: <weight>; */
   font-style: normal;
   background-image: url(../img/cork.png);
   background-size: contain;
 }
+
+/* regole overlay */
+.overlay-container{
+    /* display: none; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1000;
+}
+.overlay {
+    
+    position: relative;
+    z-index: 200; 
+           
+}
+
 
 /* HEADER */
 /* regole header */
@@ -52,9 +70,10 @@ header {
     background-color: rgb(255, 255, 255);
     margin-bottom: 60px;
     /* border-style: dashed; */
-    height: 370px;
+    height: 420px;
     
 }
+
 /* regole img container */
 .imgContainer {
     position: absolute;
@@ -63,11 +82,19 @@ header {
     top: 5%;
     right: 5%;
     bottom: 2%;
+    
 }
 
 /* regole img vacanza */
 .holidayImg {
     max-width: 100%;
+}
+
+/* regole red-pin */
+.redPin {
+    position: absolute;
+    top: -33px;
+    left: 45%;
 }
 
 /* regole generali info card sotto l'immagine */
@@ -95,6 +122,7 @@ header {
 /* REGOLE responsive card */
 @media screen and (max-width:880px) {
 
+     /* regole card */
     .card {
         
         height: 260px;
@@ -106,19 +134,29 @@ header {
 /* REGOLE TABLET */
 @media screen and (max-width:768px) {
 
-    .card {
-        flex-basis: 45%;
-        height: 320px;
-    }
+    /* regole titolo principale */
     #headerTitle {
         font-size: 60px;
         
     }
+
+    /* regole card */
+    .card {
+        flex-basis: 45%;
+        height: 330px;
+    }
+    /* regole red-pin */
+.redPin {
+    width: 30px;
+}
+
+
 }
 
 /* REGOLE MOBILE */
 @media screen and (max-width:480px) {
 
+     /* regole card */
     .card {
         flex-basis: 65%;
     }
