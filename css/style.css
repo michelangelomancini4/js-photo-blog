@@ -29,7 +29,27 @@ body{
     
     position: relative;
     z-index: 200; 
+    text-align: center;
+
            
+}
+.overlayImg {
+   /* display: none; */
+   padding-top: 3%;
+    max-width: 60%;
+    z-index: 400;
+}
+
+/* regole button chiusura */
+.closeButton {
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 15%;
+    right: 15%;
+    background-color: #abc616;
+    padding: 1%;
+    font-size: 20px;
 }
 
 
