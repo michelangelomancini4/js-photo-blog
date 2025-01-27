@@ -1,8 +1,10 @@
 
 // richiamo variabile per output
 const outputEl = document.querySelector('.cardContainer');
+
+// richiamo variabili per gestire overlay
 const overlayContainer = document.querySelector('.overlay-container');
-const closeButton = document.querySelector('closeButton');
+const closeOverlay = document.querySelector('.closeButton');
 const overlayImg= document.querySelector ('.overlayImg');
 
 
@@ -51,26 +53,21 @@ const overlayImg= document.querySelector ('.overlayImg');
     });
 
 
-    // Milestone 2 : 
+  //MILESTONE 2 : 
     // Mostro l'overlay al click sulla foto
-
-    
-// rimuovo la classe hidden quando clicco sulla foto
-outputEl.addEventListener('click', () => {
+     // rimuovo la classe hidden quando clicco sulla foto
+   outputEl.addEventListener('click', () => {
  
-    overlayContainer.classList.remove('hidden');
-    closeButton.classList.remove('hidden');
-    overlayImg.classList.remove('hidden');  
+      overlayContainer.classList.remove('hidden');
+      overlayImg.classList.remove('hidden'); 
+      closeOverlay.classList.remove('hidden');
+
+    });
+
+// nascondo l'overlay tornando allo stato precedente aggiundendo la classe hidden
+closeOverlay.addEventListener('click', () => {
+  overlayContainer.classList.add('hidden');
+  overlayImg.classList.add('hidden');
+  closeOverlay.classList.add('hidden');
 });
 
-
-// aggiungo la classe hidden quando clicco sul bottone
-closeButton.addEventListener('click', () => {
-
-  outputEl.className.add('hidden');
-  closeButton.className.add('hidden');
-  overlayImg.className.add('hidden');
-
-  
-
-});
