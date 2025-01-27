@@ -68,6 +68,5 @@ const overlayImg= document.querySelector ('.overlayImg');
 closeOverlay.addEventListener('click', () => {
 
   overlayContainer.classList.add('hidden');
-  overlayImg.classList.add('hidden');
-  closeOverlay.classList.add('hidden');
+  
 });
