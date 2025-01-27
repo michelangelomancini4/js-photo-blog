@@ -1,4 +1,4 @@
-
+  //MILESTONE 1
 // richiamo variabile per output
 const outputEl = document.querySelector('.cardContainer');
 
@@ -55,7 +55,7 @@ const overlayImg= document.querySelector ('.overlayImg');
 
   //MILESTONE 2 : 
     // Mostro l'overlay al click sulla foto
-     // rimuovo la classe hidden quando clicco sulla foto
+     // rimuovo le classi hidden quando clicco sulla foto
    outputEl.addEventListener('click', () => {
  
       overlayContainer.classList.remove('hidden');
@@ -64,10 +64,10 @@ const overlayImg= document.querySelector ('.overlayImg');
 
     });
 
-// nascondo l'overlay tornando allo stato precedente aggiundendo la classe hidden
+// nascondo l'overlay tornando allo stato precedente aggiundendo le classi hidden
 closeOverlay.addEventListener('click', () => {
+
   overlayContainer.classList.add('hidden');
   overlayImg.classList.add('hidden');
   closeOverlay.classList.add('hidden');
 });
-
