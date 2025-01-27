@@ -1,6 +1,10 @@
 
 // richiamo variabile per output
 const outputEl = document.querySelector('.cardContainer');
+const overlayContainer = document.querySelector('.overlay-container');
+const closeButton = document.querySelector('.closeButton');
+const overlayImg= document.querySelector ('.overlayImg');
+
 
     // estrapolazione array oggetti tramite API 
 
@@ -45,4 +49,29 @@ const outputEl = document.querySelector('.cardContainer');
     .catch(error => {
       console.error(error);
     });
+
+
+    // Milestone 2 : 
+    // Mostro l'overlay al click sulla foto
+
+outputEl.addEventListener('click', () => {
+ 
+    overlayContainer.classList.remove('hidden');
+    closeButton.classList.remove('hidden');
+    overlayImg.classList.remove('hidden');
+
     
+  
+});
+
+
+// aggiungo la classe hidden quando clicco sul bottone
+closeButton.addEventListener('click', () => {
+ 
+  outputEl.className.add('hidden');
+  closeButton.className.add('hidden');
+  overlayImg.className.add('hidden');
+
+  
+
+});
