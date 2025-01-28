@@ -1,23 +1,26 @@
   //MILESTONE 1
-// richiamo variabile per output
+// Richiamo variabile per output
 const outputEl = document.querySelector('.cardContainer');
 
-// richiamo variabili per gestire overlay
+// Richiamo variabili per gestire overlay
 const overlayContainer = document.querySelector('.overlay-container');
 const closeOverlay = document.querySelector('.closeButton');
 const overlayImg= document.querySelector ('.overlayImg');
 
 
-    // estrapolazione array oggetti tramite API 
+    // Estrapolazione array oggetti tramite API 
 
     axios.get("https://lanciweb.github.io/demo/api/pictures/")
     .then((response) => {
+
+      // Creo array con i dati da utilizzare
     let arrayObj = response.data;
 
-      // stampo in console l'array con gli oggetti
+      // Stampo in console l'array con gli oggetti
       console.table(arrayObj); 
 
-    // creo un ciclo per tutta la lunghezza dell'array
+    // Creo un ciclo per tutta la lunghezza dell'array
+
         for (let i = 0; i < arrayObj.length; i++) {
             const cardInfo = arrayObj[i];
 
@@ -28,6 +31,7 @@ const overlayImg= document.querySelector ('.overlayImg');
             const  {title, date, url} = cardInfo;
             
             // inserisco nell'output il codice html con le proprietà dell'oggetto destrutturato
+
             outputEl.innerHTML += `
               <div class="card">
                   <div class="imgContainer">
@@ -43,30 +47,59 @@ const overlayImg= document.querySelector ('.overlayImg');
             `;
             
         }
-      
-    })
-     
-    // in caso di errore stampo in console l'errore
+
+
+  //MILESTONE 2 : 
+  // Mostro l'overlay al click sulla foto
     
+   outputEl.addEventListener('click', () => {
+
+    // Rimuovo le classi hidden quando clicco sulla foto
+
+    overlayContainer.classList.remove('hidden');
+    overlayImg.classList.remove('hidden'); 
+    closeOverlay.classList.remove('hidden');
+
+  });
+
+// Se clicco sul bottone nascondo l'overlay, torno allo stato precedente aggiundendo le classi hidden
+
+closeOverlay.addEventListener('click', () => {
+
+ // Aggiungo la classe hidden al container dell'overlay quando clicco sul bottone
+
+ overlayContainer.classList.add('hidden');
+
+});
+
+
+// Mostro all’interno dell’overlay la foto specifica cliccata (MILESTONE 3)
+   //  creo costante che richiami tutte le foto
+
+    const cardPhotos = document.querySelectorAll('.holidayImg');
+
+ //Utilizzo un ciclo per iterare tutte le foto
+
+     for (let i = 0; i < cardPhotos.length; i++) {
+
+      // Aggiungo l'evento click ad ogni foto
+
+       cardPhotos[i].addEventListener('click', () => {
+       overlayImg.src = cardPhotos[i].src;
+        });
+     }
+
+   })
+     
+// In caso di errore stampo in console l'errore
+
     .catch(error => {
       console.error(error);
     });
 
 
-  //MILESTONE 2 : 
-    // Mostro l'overlay al click sulla foto
-     // rimuovo le classi hidden quando clicco sulla foto
-   outputEl.addEventListener('click', () => {
- 
-      overlayContainer.classList.remove('hidden');
-      overlayImg.classList.remove('hidden'); 
-      closeOverlay.classList.remove('hidden');
-
-    });
-
-// nascondo l'overlay tornando allo stato precedente aggiundendo le classi hidden
-closeOverlay.addEventListener('click', () => {
-
-  overlayContainer.classList.add('hidden');
   
-});
+
+
+
+
