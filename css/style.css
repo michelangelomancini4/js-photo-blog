@@ -96,6 +96,14 @@ header {
     height: 420px;
     
 }
+/* regole card hover */
+.card:hover  {
+
+    height: 450px;
+    transform: rotate(-23deg);
+    box-shadow: 10px 10px 5px #493e3e;
+    
+}
 
 /* regole img container */
 .imgContainer {
@@ -150,6 +158,12 @@ header {
         
         height: 250px;
     }
+    /* regola altezza card in hover */
+.card:hover  {
+   
+    height: 280px;
+  
+}
     
 }
 
@@ -183,6 +197,13 @@ header {
     width: 30px;
 }
 
+/* regola altezza card in hover */
+.card:hover  {
+   
+    height: 350px;
+  
+}
+
 
 }
 
@@ -193,6 +214,7 @@ header {
     .card {
         flex-basis: 65%;
     }
+
 }
 
 /* REGOLE RESPONSIVE HEADER TITLE 405px */
@@ -204,3 +226,5 @@ header {
      }
     
 }
+
+
